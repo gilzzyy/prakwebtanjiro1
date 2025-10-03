@@ -1,39 +1,56 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="id">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Praktikum web 1</title>
+    <title>Agil</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
+    <header>
+        <h1>Agil</h1>
+        <nav>
+            <a href="index.html">Beranda</a> |
+            <a href="about.html">Tentang</a> |
+            <a href="contact.html">Kontak</a> |
+        </nav>
+    </header>
     <main>
         <section>
             <h2>Profil</h2>
-            <<img src="https://i.pravatar.cc/150?img=3" alt="Foto Profil" class="profil-img" alt="Foto Profil" style="border-radius:50%;width:120px;height:120px;">
-            <p>Halo, saya Tanjiro! Saya seorang pengembang web pemula yang suka belajar hal baru.</p>
+            <p id="greeting">Halo, saya Agil! Saya seorang pengembang web pemula yang suka belajar hal baru.</p>
         </section>
         <section>
             <h2>Keahlian</h2>
-            <ul>
+            <ul id="skills-list">
                 <li>HTML & CSS</li>
                 <li>JavaScript Dasar</li>
                 <li>Desain Responsif</li>
             </ul>
+            <input type="text" id="new-skill" placeholder="Tambah keahlian...">
+            <button id="add-skill">Tambah</button>
         </section>
         <section>
             <h2>Proyek</h2>
-            <div>
+            <div class="project" onclick="showProjectDetail('Website Sederhana', 'Membuat website statis menggunakan HTML dan CSS.')">
                 <h3>Website Sederhana</h3>
                 <p>Membuat website statis menggunakan HTML dan CSS.</p>
             </div>
-            <div>
+            <div class="project" onclick="showProjectDetail('Aplikasi Kalkulator', 'Kalkulator sederhana berbasis JavaScript.')">
                 <h3>Aplikasi Kalkulator</h3>
                 <p>Kalkulator sederhana berbasis JavaScript.</p>
             </div>
         </section>
+        <div id="project-modal" class="modal" style="display:none;">
+                <div class="modal-content">
+                    <span class="close" id="close-modal">&times;</span>
+                    <h3 id="modal-title"></h3>
+                    <p id="modal-desc"></p>
+                </div>
+            </div>
     </main>
     <footer>
-        <p>&copy; 2025 Tanjiro - Portofolio Web</p>
+        <p>&copy; 2025 Agil - Web Fortofolio</p>
     </footer>
     <script src="script.js"></script>
 </body>

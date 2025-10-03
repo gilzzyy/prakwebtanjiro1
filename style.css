@@ -1,73 +1,242 @@
-/* Gambar profil portofolio */
-.profil-img {
-	border-radius: 50%;
-	width: 120px;
-	height: 120px;
-	object-fit: cover;
-	box-shadow: 0 2px 8px rgba(0,0,0,0.15);
-	margin-bottom: 10px;
+/* Form Kontak */
+.contact-form {
+	background: #f8fafc;
+	padding: 24px 18px 18px 18px;
+	border-radius: 10px;
+	box-shadow: 0 2px 8px rgba(0,0,0,0.07);
+	max-width: 400px;
+	margin: 0 auto;
 }
-
-main section {
-	margin-bottom: 30px;
-}
-
-main h2 {
+.contact-form label {
+	font-weight: 500;
 	color: #4a90e2;
-	margin-bottom: 10px;
 }
-
-main ul {
-	padding-left: 20px;
-}
-
-main div {
-	background: #f0f8ff;
-	padding: 15px;
+.contact-form input,
+.contact-form textarea {
+	width: 100%;
+	padding: 8px 10px;
+	margin: 6px 0 14px 0;
+	border: 1px solid #b0bec5;
 	border-radius: 6px;
-	margin-bottom: 10px;
-	box-shadow: 0 1px 4px rgba(0,0,0,0.07);
+	font-size: 1rem;
+	font-family: inherit;
+	background: #fff;
+	transition: border 0.2s;
 }
-body {
-	font-family: Arial, sans-serif;
-	background: #f4f4f4;
+.contact-form input:focus,
+.contact-form textarea:focus {
+	border: 1.5px solid #4a90e2;
+	outline: none;
+}
+.contact-form button[type="submit"] {
+	background: #4a90e2;
+	color: #fff;
+	border: none;
+	padding: 9px 22px;
+	border-radius: 6px;
+	font-size: 1rem;
+	cursor: pointer;
+	font-weight: 500;
+	transition: background 0.2s;
+}
+.contact-form button[type="submit"]:hover {
+	background: #357ab8;
+}
+/* Reset dasar */
+* {
+	box-sizing: border-box;
 	margin: 0;
 	padding: 0;
 }
 
+body {
+	font-family: 'Segoe UI', Arial, sans-serif;
+	background: linear-gradient(135deg, #e0e7ff 0%, #f8fafc 100%);
+	color: #222;
+	min-height: 100vh;
+}
+
 header {
-	background: #4a90e2;
+	background: linear-gradient(90deg, #4a90e2 60%, #6dd5ed 100%);
 	color: #fff;
-	padding: 20px 0;
+	padding: 32px 0 18px 0;
 	text-align: center;
+	box-shadow: 0 2px 8px rgba(0,0,0,0.07);
+	margin-bottom: 24px;
+}
+
+header h1 {
+	font-size: 2.5rem;
+	letter-spacing: 2px;
+	margin-bottom: 8px;
+}
+
+nav {
+	margin-top: 8px;
 }
 
 nav a {
 	color: #fff;
 	text-decoration: none;
-	margin: 0 10px;
-	font-weight: bold;
+	margin: 0 14px;
+	font-weight: 500;
+	transition: color 0.2s;
 }
 
 nav a:hover {
-	text-decoration: underline;
+	color: #ffe082;
 }
 
 main {
-	padding: 30px;
+	max-width: 700px;
+	margin: 0 auto 40px auto;
 	background: #fff;
-	max-width: 600px;
-	margin: 30px auto;
+	border-radius: 14px;
+	box-shadow: 0 4px 24px rgba(0,0,0,0.08);
+	padding: 36px 28px 32px 28px;
+}
+
+main section {
+	margin-bottom: 36px;
+}
+
+main h2 {
+	color: #4a90e2;
+	margin-bottom: 14px;
+	font-size: 1.5rem;
+	border-left: 4px solid #4a90e2;
+	padding-left: 10px;
+}
+
+main ul {
+	padding-left: 22px;
+	margin-bottom: 10px;
+}
+
+main li {
+	margin-bottom: 6px;
+}
+.profil-img:hover {
+	border: 4px solid #ffe082;
+}
+
+#change-photo, #add-skill {
+	background: #4a90e2;
+	color: #fff;
+	border: none;
+	padding: 8px 18px;
+	border-radius: 6px;
+	margin-top: 8px;
+	margin-right: 6px;
+	font-size: 1rem;
+	cursor: pointer;
+	transition: background 0.2s;
+}
+#change-photo:hover, #add-skill:hover {
+	background: #357ab8;
+}
+
+#new-skill {
+	padding: 7px 12px;
+	border: 1px solid #b0bec5;
+	border-radius: 6px;
+	font-size: 1rem;
+	margin-right: 6px;
+}
+
+.project {
+	background: #f0f8ff;
+	padding: 18px 16px;
 	border-radius: 8px;
-	box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+	margin-bottom: 14px;
+	box-shadow: 0 1px 4px rgba(0,0,0,0.07);
+	cursor: pointer;
+	transition: box-shadow 0.2s, background 0.2s;
+}
+.project:hover {
+	background: #e3f2fd;
+	box-shadow: 0 4px 16px rgba(76,175,255,0.13);
+}
+
+/* Modal untuk detail proyek */
+.modal {
+	display: none;
+	position: fixed;
+	z-index: 1000;
+	left: 0;
+	top: 0;
+	width: 100%;
+	height: 100%;
+	overflow: auto;
+	background-color: rgba(0,0,0,0.4);
+}
+.modal-content {
+	background-color: #fff;
+	margin: 10% auto;
+	padding: 20px;
+	border: 1px solid #888;
+	width: 80%;
+	max-width: 400px;
+	border-radius: 8px;
+	box-shadow: 0 2px 8px rgba(0,0,0,0.2);
+	text-align: center;
+}
+.close {
+	color: #aaa;
+	float: right;
+	font-size: 28px;
+	font-weight: bold;
+	cursor: pointer;
+}
+.close:hover,
+.close:focus {
+	color: #333;
+	text-decoration: none;
 }
 
 footer {
 	background: #222;
 	color: #fff;
 	text-align: center;
-	padding: 15px 0;
-	position: fixed;
+	padding: 18px 0 12px 0;
+	position: relative;
 	width: 100%;
-	bottom: 0;
+	border-radius: 0 0 14px 14px;
+	box-shadow: 0 -2px 8px rgba(0,0,0,0.07);
+	margin-top: 30px;
+}
+/* Modal untuk detail proyek */
+.modal {
+	display: none;
+	position: fixed;
+	z-index: 1000;
+	left: 0;
+	top: 0;
+	width: 100%;
+	height: 100%;
+	overflow: auto;
+	background-color: rgba(0,0,0,0.4);
+}
+.modal-content {
+	background-color: #fff;
+	margin: 10% auto;
+	padding: 20px;
+	border: 1px solid #888;
+	width: 80%;
+	max-width: 400px;
+	border-radius: 8px;
+	box-shadow: 0 2px 8px rgba(0,0,0,0.2);
+	text-align: center;
+}
+.close {
+	color: #aaa;
+	float: right;
+	font-size: 28px;
+	font-weight: bold;
+	cursor: pointer;
+}
+.close:hover,
+.close:focus {
+	color: #333;
+	text-decoration: none;
 }
