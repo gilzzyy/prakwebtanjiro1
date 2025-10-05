@@ -3,55 +3,78 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Agil</title>
+    <title>Portofolio Agil - Developer</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <header>
-        <h1>Agil</h1>
         <nav>
-            <a href="index.html">Beranda</a> |
-            <a href="about.html">Tentang</a> |
-            <a href="contact.html">Kontak</a> |
+            <div class="logo">Agil Portfolio</div>
+            <ul class="nav-links">
+                <li><a href="#hero">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
         </nav>
     </header>
-    <main>
-        <section>
-            <h2>Profil</h2>
-            <p id="greeting">Halo, saya Agil! Saya seorang pengembang web pemula yang suka belajar hal baru.</p>
-        </section>
-        <section>
-            <h2>Keahlian</h2>
-            <ul id="skills-list">
-                <li>HTML & CSS</li>
-                <li>JavaScript Dasar</li>
-                <li>Desain Responsif</li>
-            </ul>
-            <input type="text" id="new-skill" placeholder="Tambah keahlian...">
-            <button id="add-skill">Tambah</button>
-        </section>
-        <section>
-            <h2>Proyek</h2>
-            <div class="project" onclick="showProjectDetail('Website Sederhana', 'Membuat website statis menggunakan HTML dan CSS.')">
-                <h3>Website Sederhana</h3>
-                <p>Membuat website statis menggunakan HTML dan CSS.</p>
+
+    <section id="hero">
+        <div class="hero-content">
+            <h1 class="fade-in-up-delay-0">Selamat Datang di Portofolio Saya</h1>
+            <p class="typewriter fade-in-up-delay-1">Halo, Saya Agil</p>
+            <p class="fade-in-up-delay-2">Mahasiswa Teknik Informatika semester 3. Antusias mendalami dunia Web Development, 
+                dari barisan kode menjadi solusi digital. Saat ini fokus pada HTML, CSS, dan JavaScript. </p>
+            <a href="#about" class="cta-button fade-in-up-delay-3">Pelajari Lebih Lanjut</a>
+        </div>
+    </section>
+
+    <section id="about" class="fade-in-section">
+        <h2 class="fade-in-up-delay-0">Tentang Saya</h2>
+        <div class="about-content">
+            <div class="about-text">
+                <p class="fade-in-up-delay-1">Saya adalah seorang mahasiswa semester tiga program studi Teknik Informatika dengan minat dan semangat yang besar pada bidang pengembangan web. dan saat ini saya sedang aktif mendalami teknologi inti web seperti HTML, CSS, dan JavaScript.</p>
+                <p class="fade-in-up-delay-2">Dengan latar belakang di desain UI/UX, saya selalu fokus pada pengalaman pengguna yang seamless dan elegan.</p>
             </div>
-            <div class="project" onclick="showProjectDetail('Aplikasi Kalkulator', 'Kalkulator sederhana berbasis JavaScript.')">
-                <h3>Aplikasi Kalkulator</h3>
-                <p>Kalkulator sederhana berbasis JavaScript.</p>
+            <div class="about-image fade-in-up-delay-3">
+                <img src="asset/download (2).jpg" alt="Foto Profil">
             </div>
-        </section>
-        <div id="project-modal" class="modal" style="display:none;">
-                <div class="modal-content">
-                    <span class="close" id="close-modal">&times;</span>
-                    <h3 id="modal-title"></h3>
-                    <p id="modal-desc"></p>
-                </div>
+        </div>
+    </section>
+
+    <section id="projects" class="fade-in-section">
+        <h2 class="fade-in-up-delay-0">Proyek Saya</h2>
+        <div class="projects-grid">
+            <div class="project-card fade-in-up-delay-1">
+                <h3>Website E-Commerce</h3>
+                <p>Platform belanja online dengan integrasi payment gateway. Dibangun menggunakan React dan Node.js.</p>
+                <a href="#" class="project-link">Lihat Demo</a>
             </div>
-    </main>
-    <footer>
-        <p>&copy; 2025 Agil - Web Fortofolio</p>
+            <div class="project-card fade-in-up-delay-2">
+                <h3>Aplikasi Mobile</h3>
+                <p>App manajemen tugas dengan fitur real-time sync. Menggunakan Flutter untuk cross-platform.</p>
+                <a href="#" class="project-link">Lihat Demo</a>
+            </div>
+            <div class="project-card fade-in-up-delay-3">
+                <h3>Dashboard Analytics</h3>
+                <p>Sistem visualisasi data dengan chart interaktif. Backend di Python Django.</p>
+                <a href="#" class="project-link">Lihat Demo</a>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact" class="fade-in-section">
+        <h2 class="fade-in-up-delay-0">Hubungi Saya</h2>
+        <p class="fade-in-up-delay-1">Email: magil887@gmail.com | LinkedIn: /in/Agillz | GitHub: Agill R</p>
+        <div class="contact-info fade-in-up-delay-2">
+            <div class="contact-item">📧 Email</div>
+            <div class="contact-item">💼 LinkedIn</div>
+            <div class="contact-item">🐙 GitHub</div>
+        </div>
+    </section>
+
+    <footer class="fade-in-section">
+        <p>&copy; 2025 Agill. All rights reserved.</p>
     </footer>
-    <script src="script.js"></script>
 </body>
 </html>
